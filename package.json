@@ -1,0 +1,7 @@
+{
+  "name": "untisPlan",
+  "version": "1.0.0",
+  "dependencies": {
+    "webuntis": "^1.14.0"
+  }
+}
