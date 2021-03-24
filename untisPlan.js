@@ -89,7 +89,7 @@ untis
         outputTimeTable(timetable);
     })
     .then(() => {
-    	const m = new Date();
+        const m = new Date();
         const dateString = formatDate(m) + " " + formatTime(m);
         console.log("\nLast updated " + dateString);
     });
