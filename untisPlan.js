@@ -111,7 +111,7 @@ function usage() {
 function weekday(date) {
     let weekdays = new Array(7);
     weekdays[0] = "Sonntag";
-    weekdays[1] = "Mostantag";
+    weekdays[1] = "Montag";
     weekdays[2] = "Dienstag";
     weekdays[3] = "Mittwoch";
     weekdays[4] = "Donnerstag";

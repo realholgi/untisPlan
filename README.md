@@ -1,5 +1,5 @@
 # untisPlan
-Scrape the WebUntis API to display a timetable for today and tomorrow
+Scrape the WebUntis API to display a timetable for today and tomorrow.
 
 Usage: `node untisPlan.js username password school baseurl`
 
