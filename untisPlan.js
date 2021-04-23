@@ -178,11 +178,15 @@ function nextSchoolday() {
 function outputTimeTableElement(element) {
     const activityType = element.activityType === "Unterricht" ? "" : (" " + element.activityType);
 
+    let room = element.ro[0].longname;
+    if (room != element.ro[0].name) {
+        room = room + " [" + element.ro[0].name + "]";
+    }
     const activity = element.su[0].name.padEnd(3, " ");
     let ret = formatUntisTime(element.startTime) + " - " + formatUntisTime(element.endTime);
     ret = ret + " " + activity + " (" + element.su[0].longname + ")";
     ret = ret + activityType + (element.substText ? " [" + element.substText + "]" : "");
-
+    ret = ret + " - " + room;
     return ret;
 }
 
