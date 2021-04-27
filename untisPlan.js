@@ -99,8 +99,10 @@ function outputTimeTable(timetable) {
     timetable
         .sort(dynamicSort("startTime"))
         .forEach(function (element) {
-            //console.log(JSON.stringify(element, null, 4));
-            console.log(outputTimeTableElement(element));
+            // console.log(JSON.stringify(element, null, 4));
+            if (element.code != "cancelled") {
+                console.log(outputTimeTableElement(element));
+            }
         });
 }
 
