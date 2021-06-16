@@ -180,13 +180,22 @@ function nextSchoolday() {
 function outputTimeTableElement(element) {
     const activityType = element.activityType === "Unterricht" ? "" : (" " + element.activityType);
 
-    let room = element.ro[0].longname;
-    if (room != element.ro[0].name) {
-        room = room + " [" + element.ro[0].name + "]";
+    let room = "";
+    if (element.ro[0]) {
+        room = element.ro[0].longname;
+        if (room != element.ro[0].name) {
+            room = room + " [" + element.ro[0].name + "]";
+        }
     }
-    const activity = element.su[0].name.padEnd(3, " ");
+
+    let activity = "";
+    let longname = "";
+    if (element.su[0]) {
+        activity = element.su[0].name.padEnd(3, " ");
+        longname = " (" + element.su[0].longname + ")"
+    }
     let ret = formatUntisTime(element.startTime) + " - " + formatUntisTime(element.endTime);
-    ret = ret + " " + activity + " (" + element.su[0].longname + ")";
+    ret = ret + " " + activity + longname;
     ret = ret + activityType + (element.substText ? " [" + element.substText + "]" : "");
     ret = ret + " - " + room;
     return ret;
