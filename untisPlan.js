@@ -92,8 +92,8 @@ untis
         const m = new Date();
         const dateString = formatDate(m) + " " + formatTime(m);
         console.log("\nLast updated " + dateString);
-    });
-
+    })
+    .catch(error => console.log(error.message));
 
 function outputTimeTable(timetable) {
     timetable
