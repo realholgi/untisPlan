@@ -2,6 +2,6 @@
   "name": "untisPlan",
   "version": "1.0.0",
   "dependencies": {
-    "webuntis": "^1.16.0"
+    "webuntis": "^2.2.0"
   }
 }
